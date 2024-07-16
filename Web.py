@@ -14,8 +14,8 @@ st.title("My Todo App")
 st.subheader("Hell0,Welcome")
 
 try:
-    for index, i in enumerate(todos):
-        checkbox = st.checkbox(i, key=i)
+    for index, todo in enumerate(todos):
+        checkbox = st.checkbox(todo, key=todo)
         if checkbox:
             todos.pop(index)
             Module.write_Todo(todos)
